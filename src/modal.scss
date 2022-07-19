@@ -1,0 +1,54 @@
+.modal
+{
+    background-color: #fff;
+    max-width: 80%;
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    max-height: 80%;  
+    padding: 2em;
+    box-sizing: border-box;
+    border-radius: 0.5em;
+    display: none;
+    &-overlay
+    {
+        position: fixed;
+        z-index: 999;
+        top: -25%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 125%;
+        width: 100%;
+        background: #000;
+        display: none;
+        will-change: opacity;
+        &.active
+        {
+            z-index: 1002;
+            display: block;
+            opacity: 0.5;
+        }
+    }
+    &-footer
+    {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: right;
+        padding: 2em;
+        box-sizing: border-box;
+    }
+    &.active
+    {
+        z-index: 1003;
+        display: block;
+        opacity: 1;        
+        transform: scaleX(1) scaleY(1);
+    }
+}

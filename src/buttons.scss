@@ -1,0 +1,82 @@
+.btn
+{
+    text-decoration: none;
+    display: inline-block;    
+    box-shadow: rgba(#000, 0.16) 0px 0px 4px;
+    border-radius: 4px;
+    color: #fff;
+    text-transform: uppercase;
+    height: 40px;
+    line-height: 40px;
+    padding: 0.25em 1em;
+    vertical-align: middle;
+    .material-icons
+    {
+        line-height: 40px;
+    }
+    &:hover
+    {
+        background-color: darken($primary-color, 10%);
+    }
+    &-large
+    {
+        border: 0px;
+        background-color: $primary-color;
+        border-radius: 4px;
+        color: #FFFFFF;
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 16px;
+        &.facebook
+        {
+            background-color: #3B5998;
+            &:hover
+            {
+
+                background-color: darken(#3B5998, 10%);
+            }
+        }
+        .material-icons 
+        {
+            line-height: 50px;
+            margin-right: 16px;
+        }
+        span
+        {
+            line-height: 50px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    &-flat
+    {
+        text-decoration: none;
+        display: inline-block;            
+        border-radius: 4px;        
+        text-transform: uppercase;
+        height: 40px;
+        line-height: 40px;
+        padding: 0.25em 1em;
+        vertical-align: middle;
+        background-color: transparent;
+        &:hover
+        {
+            cursor: pointer;
+            background-color: darken(#eee, 10%);
+        }
+    }
+}
+.btn, .btn-large, .btn-small
+{
+    background-color: $primary-color;
+    &:hover
+    {
+        background-color: darken($primary-color, 10%);
+        cursor: pointer;
+    }
+}

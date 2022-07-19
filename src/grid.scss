@@ -1,0 +1,12 @@
+.row
+{
+    margin-top: 8px;
+    .col
+    {
+        display: inline-block;
+        &.s6
+        {
+            width: 49%;
+        }
+    }
+}

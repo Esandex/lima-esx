@@ -1,0 +1,55 @@
+table
+{
+    border-collapse: collapse;
+    width: 100%;
+    thead
+    {
+        background-color: rgba($primary-color, 0.1);
+        color: rgba($primary-color, 0.7);
+        text-transform: uppercase;
+        th
+        {
+            font-size: 12px;
+            height: 40px;
+            padding: 0 8px;
+        }
+    }
+    tbody
+    {
+        box-shadow: rgba(#000, 0.16) 0px 3px 6px;
+        tr
+        {
+            background-color: #FFFFFF;
+            td
+            {
+                padding: 1em 0.5em;
+                border-bottom: 1px solid #E7EAEA;
+                a
+                {
+                    color: lighten($primary-color, 10%);
+                    &:hover
+                    {
+                        color: darken($primary-color, 50%);
+                    }
+                    &:visited
+                    {
+                        color: darken($primary-color, 50%);
+                    }
+                }
+                i
+                {
+                    cursor: pointer;
+                }
+            }
+            &.selected
+            {
+                background-color: #dcedc8;
+            }
+            &:hover
+            {
+                background-color: rgba($primary-color, 0.1);
+                
+            }
+        }
+    }
+}
