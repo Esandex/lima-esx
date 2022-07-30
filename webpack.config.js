@@ -1,5 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
+const RemoveConsolePlugin = require('remove-console-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -22,8 +24,17 @@ module.exports = {
         ],
       },
     ],
+   
   },
   plugins: [   
     new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new CopyPlugin({
+      patterns:[
+        {
+          from: path.resolve(__dirname, './src/index.d.ts'), 
+        }
+      ],
+    }), 
+    new RemoveConsolePlugin({ include: ['*'] })
   ],
 };

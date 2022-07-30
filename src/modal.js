@@ -1,14 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() {       
-    addTriggerClose()     
-    addTriggers()
-});
 function modalInit(){
     addTriggerClose()     
     addTriggers()
 }
 function addTriggers(){
     console.log('agregando triggers modal') 
-    triggers = document.getElementsByClassName('modal-trigger')    
+    let triggers = document.getElementsByClassName('modal-trigger')    
     console.log(triggers)
     for (let index = 0; index < triggers.length; index++) {        
         triggers[index].removeEventListener("click", modalTrigger);
@@ -17,7 +13,7 @@ function addTriggers(){
 }
 function addTriggerClose(){
     console.log('agregando eventos modal')
-    seleccionados = document.getElementsByClassName('modal-close')         
+    let seleccionados = document.getElementsByClassName('modal-close')         
     for (let index = 0; index < seleccionados.length; index++) {        
         seleccionados[index].removeEventListener("click", modalClose);
         seleccionados[index].addEventListener("click", modalClose);             
@@ -26,7 +22,7 @@ function addTriggerClose(){
 function modalTrigger(e){
     console.log(this);
     e.stopPropagation();   
-    el = document.getElementById(this.dataset.target)
+    let el = document.getElementById(this.dataset.target)
     modalToggle(el)
 }
 function modalToggle(e) {    
@@ -40,6 +36,7 @@ function modalClose(e)
     and open/close the current select box: */    
     console.log(this.closest(".modal"));
     e.stopPropagation();    
-    el = this.closest(".modal")
+    let el = this.closest(".modal")
     modalToggle(el)
 }
+export {modalInit, addTriggers, modalTrigger, addTriggerClose, modalToggle, modalClose}

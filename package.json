@@ -1,8 +1,9 @@
 {
   "name": "lima-esx",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "description": "",
-  "main": "index.js",
+  "main": "dist/lima-esx.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,8 +22,10 @@
     "webpack-cli": "^4.10.0"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
+    "remove-console-webpack-plugin": "^0.2.0",
     "sass": "^1.54.0",
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
