@@ -3,16 +3,16 @@ function modalInit(){
     addTriggers()
 }
 function addTriggers(){
-    console.log('agregando triggers modal') 
+    
     let triggers = document.getElementsByClassName('modal-trigger')    
-    console.log(triggers)
+   
     for (let index = 0; index < triggers.length; index++) {        
         triggers[index].removeEventListener("click", modalTrigger);
         triggers[index].addEventListener("click", modalTrigger);        
     }
 }
 function addTriggerClose(){
-    console.log('agregando eventos modal')
+  
     let seleccionados = document.getElementsByClassName('modal-close')         
     for (let index = 0; index < seleccionados.length; index++) {        
         seleccionados[index].removeEventListener("click", modalClose);
@@ -20,13 +20,13 @@ function addTriggerClose(){
     }
 }
 function modalTrigger(e){
-    console.log(this);
+   
     e.stopPropagation();   
     let el = document.getElementById(this.dataset.target)
     modalToggle(el)
 }
 function modalToggle(e) {    
-    console.log(e)  
+   
     e.classList.toggle("active");  
     document.getElementsByClassName('modal-overlay')[0].classList.toggle("active");  
 }
@@ -34,9 +34,9 @@ function modalClose(e)
 {
     /* When the select box is clicked, close any other select boxes,
     and open/close the current select box: */    
-    console.log(this.closest(".modal"));
+   
     e.stopPropagation();    
     let el = this.closest(".modal")
     modalToggle(el)
 }
-export {modalInit, addTriggers, modalTrigger, addTriggerClose, modalToggle, modalClose}
+//export {modalInit, addTriggers, modalTrigger, addTriggerClose, modalToggle, modalClose}

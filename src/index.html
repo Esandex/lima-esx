@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lima ESX</title>
+
+    
 </head>
 <body>
     <header>
@@ -14,5 +16,37 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <div class="modal">
+            <p>¿Estás segundo que quieres eliminar este elemento?</p>
+            <div class="modal-footer">
+                <div class="btn-flat modal-close">Cancelar</div>
+                    <div class="btn modal-close" onclick="save()">Guardar</div>
+            </div>
+        </div>
+
+        <div id="compra_nuevo" class="modal modal-size-l">
+            <h3>Nuevo Producto</h3>
+            <form action="">       
+                <div class="input-field">
+                    <label for="imei">IMEI</label>
+                    <input id="imei" type="text">
+                </div>
+                <div class="input-field">
+                    <label for="descripcion">Descripción</label>
+                    <input id="descripcion" type="text">
+                </div>
+                <div class="input-field">
+                    <label for="costo">Costo</label>
+                    <input id="costo" type="text">
+                </div>
+             
+                <div class="modal-footer">
+                    <div class="btn-flat modal-close">Cancelar</div>
+                    <div class="btn modal-close" onclick="save()">Guardar</div>
+                </div>
+            </form>
+        </div>
+       </main>
 </body>
 </html>
